@@ -1,17 +1,14 @@
 class Solution {
 public:
     char findKthBit(int n, int k) {
-        vector<string> s(n+1);
-        s[1]="0";
-        for(int i=2; i<n+1; i++){
-            string t=s[i-1];
-            reverse(t.begin(),t.end());
-            for(char &c : t) {
-                c=(c=='0')?'1':'0';
-            }
-            s[i]=s[i-1]+"1"+t;
+        if(n==1) return '0';
+        int len=(1<<n)-1;
+        if(k<(len+1)/2.0){
+            return findKthBit(n-1,k);
         }
-        char ch=s[n][k-1];
-        return ch;
+        else if(k==(len+1)/2.0){
+            return '1';
+        }
+        else return findKthBit(n-1,(len-k+1))=='0'?'1':'0';
     }
 };
