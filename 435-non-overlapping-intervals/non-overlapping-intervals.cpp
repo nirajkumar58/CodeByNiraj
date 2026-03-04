@@ -3,8 +3,8 @@ public:
     int eraseOverlapIntervals(vector<vector<int>>& v) {
         int n=v.size();
         // vector<int> help=v[0];
-        sort(v.begin(), v.end(), [](auto &a, auto &b){
-            return a[1] < b[1];
+        sort(v.begin(),v.end(), [](auto &a, auto &b){
+            return a[1]<b[1];
         });
  vector<int> help=v[0];
         int cnt=0;
