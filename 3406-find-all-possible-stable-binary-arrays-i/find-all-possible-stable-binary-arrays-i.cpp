@@ -7,7 +7,7 @@ public:
         if(t[ones][zeros][last]!=-1)
         return t[ones][zeros][last];
         long long ans=0;
-        if(last==1){
+        if(last==true){
             for(int i=1;i<=min(zeros,limit);i++)
             ans=(ans+solve(ones,zeros-i,false,limit))%mod;
         }
