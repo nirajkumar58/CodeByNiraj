@@ -21,8 +21,8 @@ public:
             len[i]=cnt;
             sum[i]=add;
         }
-        for(int i=0; i<n; i++) cout<<ts[i]<<" ";
-        cout<<endl;
+        // for(int i=0; i<n; i++) cout<<ts[i]<<" ";
+        // cout<<endl;
         vector<int> res;
         for(int i=0; i<q.size(); i++){
             int l=q[i][0];
@@ -33,11 +33,11 @@ public:
             if(l-1>=0)
             mul-=sum[l-1],x=ts[l-1]%cn,gap-=len[l-1];
             long long y=ts[r]%cn;
-            // cout<<x<<" "<<y<<endl;
+            //cout<<x<<" "<<y<<endl;
             long long b=0;
-            // cout<<len[r]<<" "<<len[l]<<" "<<gap<<endl;
-            b = (y-(x*pw[gap])%cn+cn) %cn;
-            // cout<<b<<" "<<mul<<endl;
+            //cout<<len[r]<<" "<<len[l]<<" "<<gap<<endl;
+            b=(y-(x*pw[gap])%cn+cn)%cn;
+            //cout<<b<<" "<<mul<<endl;
             int ans=(mul%cn)*(b%cn)%cn;
             res.push_back(ans);
 
