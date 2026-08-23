@@ -14,7 +14,7 @@ public:
                 ssum+=s[n-i-1]-'0';
             }
         }
-        cout<<fcnt<<" "<<scnt<<" "<<ssum<<" "<<fsum<<" "<<(fsum-ssum);
+        // cout<<fcnt<<" "<<scnt<<" "<<ssum<<" "<<fsum<<" "<<(fsum-ssum);
         int t=(scnt-fcnt)/2;
         if((fsum-ssum)!=t*9||(fcnt+scnt)%2==1) return true;
         return false;
