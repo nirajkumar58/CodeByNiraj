@@ -6,13 +6,13 @@ public:
         string cur = "";
 
         for(char ch:s){
-            if(ch == '('){
+            if(ch=='('){
                 st.push(cur);
-                cur = "";
+                cur="";
             }
-            else if(ch == ')'){
+            else if(ch==')'){
                 reverse(cur.begin(), cur.end());
-                cur = st.top()+cur;
+                cur=st.top()+cur;
                 st.pop();
             }
             else {
