@@ -2,7 +2,7 @@
 class Solution {
     void fnc(int count,int i, set<string> &st,string &curr, int n, string &s, int &m){
         if(count<0) return;
-        if(i==n){
+      
             if(count==0){
                 if(curr.size()>m){
                     m=curr.size();
@@ -13,8 +13,8 @@ class Solution {
                     st.insert(curr);
                 }
             }
-            return;
-        }
+        
+        if(i==n) return;
         if(s[i]!='('&&s[i]!=')'){
         curr.push_back(s[i]);
         fnc(count,i+1,st,curr,n,s,m);
