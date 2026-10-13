@@ -23,7 +23,7 @@ public:
                 mp[nums[j]]++;
                 j++;
             }else{
-           if (--mp[nums[i]] == 0)
+           if (--mp[nums[i]]==0)
                     mp.erase(nums[i]);
                 i++;
             }
